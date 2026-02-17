@@ -1,0 +1,21 @@
+id,patient_id,doctor_id,date,time,type,status,notes
+A001,P001,D001,2025-10-07,14:30,Routine Checkup,Completed,Regular routine checkup appointment
+A002,P005,D004,2025-10-02,11:30,Routine Checkup,Completed,Regular routine checkup appointment
+A003,P001,D002,2025-10-05,09:30,Consultation,Completed,Regular consultation appointment
+A004,P005,D004,2025-11-12,13:00,Follow-up,Scheduled,Regular follow-up appointment
+A005,P004,D004,2025-11-19,12:30,Follow-up,Scheduled,Regular follow-up appointment
+A006,P004,D001,2025-10-30,09:00,Routine Checkup,Scheduled,Regular routine checkup appointment
+A007,P002,D002,2025-11-06,15:30,Routine Checkup,Scheduled,Regular routine checkup appointment
+A008,P004,D003,2025-10-30,14:00,Emergency,Scheduled,Regular emergency appointment
+A009,P003,D003,2025-11-18,10:00,Emergency,Scheduled,Regular emergency appointment
+A010,P005,D002,2025-10-25,13:00,Follow-up,Completed,Regular follow-up appointment
+A011,P002,D002,2025-10-29,15:30,Follow-up,Scheduled,Regular follow-up appointment
+A012,P005,D001,2025-10-10,13:00,Routine Checkup,Completed,Regular routine checkup appointment
+A013,P001,D002,2025-11-15,16:30,Consultation,Scheduled,Regular consultation appointment
+A014,P002,D003,2025-11-14,13:30,Follow-up,Scheduled,Regular follow-up appointment
+A015,P004,D003,2025-10-05,16:00,Routine Checkup,Completed,Regular routine checkup appointment
+A016,P001,D004,2025-11-07,14:30,Routine Checkup,Scheduled,Regular routine checkup appointment
+A017,P005,D001,2025-11-12,15:30,Routine Checkup,Scheduled,Regular routine checkup appointment
+A018,P003,D001,2025-11-09,14:30,Consultation,Scheduled,Regular consultation appointment
+A019,P001,D004,2025-11-07,16:30,Emergency,Scheduled,Regular emergency appointment
+A020,P004,D004,2025-10-15,14:00,Follow-up,Completed,Regular follow-up appointment

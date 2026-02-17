@@ -1,0 +1,6 @@
+id,name,age,gender,contact,address,blood_group,admission_date,department,assigned_doctor,status,photo
+P001,John Doe,45,Male,9876543210,"123 Main St, NYC",O+,2024-01-15,Cardiology,D001,Active,patient_P001.png
+P002,Jane Smith,32,Female,9876543211,"456 Oak Ave, LA",A+,2024-02-20,Neurology,D002,Active,patient_P002.png
+P003,Mike Johnson,58,Male,9876543212,"789 Pine Rd, Chicago",B+,2024-03-10,Orthopedics,D003,Active,patient_P003.png
+P004,Sarah Williams,28,Female,9876543213,"321 Elm St, Boston",AB+,2024-04-05,Pediatrics,D004,Active,patient_P004.png
+P005,Robert Brown,65,Male,9876543214,"654 Maple Dr, Seattle",O-,2024-05-12,Cardiology,D001,Active,

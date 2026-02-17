@@ -1,0 +1,13 @@
+report_id,patient_id,test_name,date,result,status,technician
+LR001,P005,Liver Function Test,2025-10-30,Awaiting,Pending,John Lab
+LR002,P003,Thyroid Function Test,2025-10-07,Normal,Completed,Mike Analyst
+LR003,P002,Blood Sugar,2025-10-24,Normal,Completed,John Lab
+LR004,P004,Ultrasound,2025-10-14,Normal,Completed,Mike Analyst
+LR005,P003,ECG,2025-10-15,Normal,Completed,Anna Tech
+LR006,P003,Blood Sugar,2025-10-08,Normal,Completed,John Lab
+LR007,P004,X-Ray Chest,2025-10-10,Normal,Completed,Anna Tech
+LR008,P002,Lipid Profile,2025-10-12,Normal,Completed,Anna Tech
+LR009,P002,Ultrasound,2025-10-25,Normal,Completed,Anna Tech
+LR010,P004,Lipid Profile,2025-10-16,Normal,Completed,John Lab
+LR011,P005,ECG,2025-10-11,Normal,Completed,John Lab
+LR012,P005,Blood Sugar,2025-10-31,Awaiting,Pending,Anna Tech

@@ -1,0 +1,5 @@
+id,name,head_doctor,beds_total,beds_occupied
+DEPT001,Cardiology,D001,20,12
+DEPT002,Neurology,D002,15,8
+DEPT003,Orthopedics,D003,25,18
+DEPT004,Pediatrics,D004,30,22

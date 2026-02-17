@@ -1,0 +1,10 @@
+billId,patientId,amount,date,mode,paid,method_details
+1,8,2000000.0,2025-10-27,Online,yes,OnlineQR
+2,9,200.0,2025-10-27,Cash,yes,Cash
+3,9,2000000.0,2025-10-27,Online,yes,OnlineQR
+4,9,2000000.0,2025-10-27,Card,yes,Card|jayanth|5678
+5,10,52575.36,2025-10-27,Online,yes,OnlineQR
+6,10,52575.36,2025-10-27,Online,yes,OnlineQR
+7,10,52575.36,2025-10-27,Online,yes,OnlineQR
+8,10,52575.36,2025-10-27,Online,no,
+9,10,52575.36,2025-10-27,Cash,yes,Cash

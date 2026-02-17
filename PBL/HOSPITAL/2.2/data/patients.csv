@@ -1,0 +1,11 @@
+id,name,age,gender,disease,photo,created
+1,Patient 1,21,M,Fever,pat1.png,2025-08-19
+2,Patient 2,22,F,Flu,pat2.png,2025-09-03
+3,Patient 3,23,M,Diabetes,pat3.png,2025-07-09
+4,Patient 4,24,F,Flu,pat4.png,2025-08-04
+5,Patient 5,25,F,Diabetes,pat5.png,2025-10-12
+6,Patient 6,26,M,Fever,pat6.png,2025-07-30
+7,Patient 7,27,F,Fracture,pat7.png,2025-10-24
+8,Patient 8,28,M,Flu,pat8.png,2025-10-12
+9,gadha,20,M,AIDS,,2025-10-27
+10,jayanth,,,Emergency,,2025-10-27

@@ -1,0 +1,11 @@
+bill_id,patient_id,amount,date,payment_mode,status,items
+B001,P003,1605.00,2025-10-14,Cash,Paid,"Consultation, Medicines, Lab Tests"
+B002,P005,1150.00,2025-10-05,Cash,Paid,"Consultation, Medicines, Lab Tests"
+B003,P004,3760.00,2025-10-27,Card,Paid,"Consultation, Medicines, Lab Tests"
+B004,P003,1291.00,2025-10-08,Card,Paid,"Consultation, Medicines, Lab Tests"
+B005,P002,1035.00,2025-10-19,Cash,Paid,"Consultation, Medicines, Lab Tests"
+B006,P003,1111.00,2025-09-27,Online,Paid,"Consultation, Medicines, Lab Tests"
+B007,P002,4774.00,2025-10-15,Cash,Paid,"Consultation, Medicines, Lab Tests"
+B008,P001,2007.00,2025-10-02,Cash,Paid,"Consultation, Medicines, Lab Tests"
+B009,P002,3057.00,2025-10-09,Cash,Paid,"Consultation, Medicines, Lab Tests"
+B010,P004,2238.00,2025-10-27,Online,Paid,"Consultation, Medicines, Lab Tests"

@@ -1,0 +1,5 @@
+id,name,specialization,contact,email,department,photo
+D001,Dr. Robert Smith,Cardiologist,9876543220,robert.smith@medcare.com,Cardiology,
+D002,Dr. Emily Chen,Neurologist,9876543221,emily.chen@medcare.com,Neurology,
+D003,Dr. James Anderson,Orthopedic Surgeon,9876543222,james.anderson@medcare.com,Orthopedics,
+D004,Dr. Maria Garcia,Pediatrician,9876543223,maria.garcia@medcare.com,Pediatrics,

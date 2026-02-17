@@ -1,0 +1,16 @@
+id,patient_id,doctor_id,date,medicine,dosage,duration,notes
+PR001,P004,D002,2025-10-10,Omeprazole,500mg,9 days,Take after meals
+PR002,P001,D002,2025-10-22,Aspirin,50mg,3 days,Take after meals
+PR003,P001,D003,2025-10-09,Paracetamol,50mg,7 days,Take after meals
+PR004,P003,D004,2025-09-30,Metformin,500mg,3 days,Take after meals
+PR005,P004,D003,2025-10-09,Lisinopril,500mg,12 days,Take after meals
+PR006,P005,D004,2025-10-23,Aspirin,100mg,6 days,Take after meals
+PR007,P003,D002,2025-10-23,Omeprazole,250mg,14 days,Take after meals
+PR008,P003,D001,2025-10-14,Lisinopril,500mg,4 days,Take after meals
+PR009,P004,D004,2025-10-14,Amoxicillin,250mg,6 days,Take after meals
+PR010,P002,D003,2025-10-14,Lisinopril,500mg,4 days,Take after meals
+PR011,P005,D002,2025-10-16,Omeprazole,500mg,5 days,Take after meals
+PR012,P004,D002,2025-10-18,Lisinopril,100mg,4 days,Take after meals
+PR013,P003,D004,2025-09-30,Amoxicillin,500mg,8 days,Take after meals
+PR014,P005,D001,2025-10-11,Metformin,500mg,14 days,Take after meals
+PR015,P005,D002,2025-10-11,Paracetamol,100mg,11 days,Take after meals
