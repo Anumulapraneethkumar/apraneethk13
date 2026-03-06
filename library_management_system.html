@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library Management System</title>
+<style>
+
+/* ---------- BASIC PAGE STYLE ---------- */
+body{
+    font-family: Arial;
+    background:#dcd9d9;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background:#5ca9d2;
+    color:rgb(196, 231, 233);
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:20px;
+}
+
+.card{
+    background:rgb(190, 204, 190);
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:6px;
+    box-shadow:0 0 5px rgba(147, 32, 32, 0.2);
+}
+
+h2{
+    margin-top:0;
+}
+
+/* ---------- FORM STYLE ---------- */
+
+input{
+    padding:8px;
+    margin:5px;
+}
+
+button{
+    padding:8px 12px;
+    margin:5px;
+    background:#3498db;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+/* ---------- TABLE STYLE ---------- */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th, table td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+
+table th{
+    background:#34495e;
+    color:white;
+}
+
+/* ---------- SEARCH BAR ---------- */
+
+#searchBox{
+    width:200px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2c3e50;
+    color:white;
+    margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Bhagat sing library</h1>
+</header>
+
+<div class="container">
+
+<!-- ADD BOOK SECTION -->
+
+<div class="card">
+
+<h2>Add Book</h2>
+
+<input id="title" placeholder="Book Title">
+<input id="author" placeholder="Author">
+<input id="qty" placeholder="Quantity">
+
+<button onclick="addBook()">Add Book</button>
+
+</div>
+
+<!-- SEARCH SECTION -->
+
+<div class="card">
+
+<h2>Search Book</h2>
+
+<input id="searchBox" placeholder="Enter book title">
+<button onclick="searchBook()">Search</button>
+<button onclick="displayBooks()">Reset</button>
+
+</div>
+
+<!-- BOOK TABLE -->
+
+<div class="card">
+
+<h2>Library Books</h2>
+
+<table id="bookTable">
+
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Quantity</th>
+<th>Issue</th>
+<th>Return</th>
+<th>Delete</th>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+Library Management System Project
+</footer>
+
+<script>
+
+/* ---------------- STORAGE ---------------- */
+
+let books = JSON.parse(localStorage.getItem("books")) || [];
+
+/* ---------------- DISPLAY BOOKS ---------------- */
+
+function displayBooks(){
+
+let table = document.getElementById("bookTable");
+
+table.innerHTML = `
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Quantity</th>
+<th>Issue</th>
+<th>Return</th>
+<th>Delete</th>
+</tr>
+`;
+
+books.forEach((book,index)=>{
+
+let row = table.insertRow();
+
+row.insertCell(0).innerHTML = index+1;
+row.insertCell(1).innerHTML = book.title;
+row.insertCell(2).innerHTML = book.author;
+row.insertCell(3).innerHTML = book.qty;
+
+row.insertCell(4).innerHTML =
+'<button onclick="issueBook('+index+')">Issue</button>';
+
+row.insertCell(5).innerHTML =
+'<button onclick="returnBook('+index+')">Return</button>';
+
+row.insertCell(6).innerHTML =
+'<button onclick="deleteBook('+index+')">Delete</button>';
+
+});
+
+}
+
+/* ---------------- ADD BOOK ---------------- */
+
+function addBook(){
+
+let title = document.getElementById("title").value;
+let author = document.getElementById("author").value;
+let qty = document.getElementById("qty").value;
+
+if(title=="" || author=="" || qty==""){
+alert("Please fill all fields");
+return;
+}
+
+let book = {
+
+title:title,
+author:author,
+qty:parseInt(qty)
+
+};
+
+books.push(book);
+
+localStorage.setItem("books",JSON.stringify(books));
+
+displayBooks();
+
+clearForm();
+
+}
+
+/* ---------------- CLEAR FORM ---------------- */
+
+function clearForm(){
+
+document.getElementById("title").value="";
+document.getElementById("author").value="";
+document.getElementById("qty").value="";
+
+}
+
+/* ---------------- DELETE BOOK ---------------- */
+
+function deleteBook(index){
+
+if(confirm("Delete this book?")){
+
+books.splice(index,1);
+
+localStorage.setItem("books",JSON.stringify(books));
+
+displayBooks();
+
+}
+
+}
+
+/* ---------------- ISSUE BOOK ---------------- */
+
+function issueBook(index){
+
+if(books[index].qty>0){
+
+books[index].qty--;
+
+alert("Book Issued");
+
+}else{
+
+alert("Book Not Available");
+
+}
+
+localStorage.setItem("books",JSON.stringify(books));
+
+displayBooks();
+
+}
+
+/* ---------------- RETURN BOOK ---------------- */
+
+function returnBook(index){
+
+books[index].qty++;
+
+alert("Book Returned");
+
+localStorage.setItem("books",JSON.stringify(books));
+
+displayBooks();
+
+}
+
+/* ---------------- SEARCH BOOK ---------------- */
+
+function searchBook(){
+
+let keyword = document.getElementById("searchBox").value.toLowerCase();
+
+let table = document.getElementById("bookTable");
+
+table.innerHTML = `
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Quantity</th>
+<th>Issue</th>
+<th>Return</th>
+<th>Delete</th>
+</tr>
+`;
+
+books.forEach((book,index)=>{
+
+if(book.title.toLowerCase().includes(keyword)){
+
+let row = table.insertRow();
+
+row.insertCell(0).innerHTML = index+1;
+row.insertCell(1).innerHTML = book.title;
+row.insertCell(2).innerHTML = book.author;
+row.insertCell(3).innerHTML = book.qty;
+
+row.insertCell(4).innerHTML =
+'<button onclick="issueBook('+index+')">Issue</button>';
+
+row.insertCell(5).innerHTML =
+'<button onclick="returnBook('+index+')">Return</button>';
+
+row.insertCell(6).innerHTML =
+'<button onclick="deleteBook('+index+')">Delete</button>';
+
+}
+
+});
+
+}
+
+/* ---------------- INITIAL LOAD ---------------- */
+
+displayBooks();
+
+</script>
+
+</body>
+</html>
